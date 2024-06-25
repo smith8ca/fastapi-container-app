@@ -1,0 +1,24 @@
+services:
+  fastapi:
+    container_name: fastapi-app
+    # depends_on:
+    #   - mysql
+    environment:
+      TZ: America/New_York
+    hostname: fastapi-app
+    image: semaphoreui/semaphore:latest
+    labels:
+      - homepage.group=Local Services
+      - homepage.name=FastAPI
+      # - homepage.icon=semaphore.png
+      - homepage.href=${HOST}:${PORT}
+      - homepage.description=FastAPI application
+    ports:
+      - ${PORT}:443
+    restart: unless-stopped
+    volumes:
+      - fastapi-app:/data
+      # - ${BASE_DIR}/data:/data
+
+volumes:
+  fastapi-app:
