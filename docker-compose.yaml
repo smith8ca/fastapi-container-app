@@ -1,12 +1,12 @@
 services:
   fastapi:
-    container_name: fastapi-app
+    container_name: fastapi
     # depends_on:
     #   - mysql
     environment:
       TZ: America/New_York
     hostname: fastapi-app
-    image: semaphoreui/semaphore:latest
+    image: smith8ca/fastapi-container-app:latest
     labels:
       - homepage.group=Local Services
       - homepage.name=FastAPI

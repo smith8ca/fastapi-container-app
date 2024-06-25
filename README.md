@@ -25,13 +25,13 @@ fastapi run main.py --host 0.0.0.0 --port 80
 Build docker image:
 
 ```bash
-docker build -t fastapi-container-app .
+docker build -t smith8ca/fastapi-container-app .
 ```
 
 Run the docker image:
 
 ```bash
-docker run -d --name fastapi -p 443:443 fastapi-container-app
+docker run -d --name fastapi -p 443:443 smith8ca/fastapi-container-app
 ```
 
 ## Sources & References
