@@ -1,3 +1,4 @@
+---
 services:
   fastapi:
     container_name: fastapi
@@ -10,7 +11,7 @@ services:
     labels:
       - homepage.group=Local Services
       - homepage.name=FastAPI
-      # - homepage.icon=semaphore.png
+      - homepage.icon=
       - homepage.href=${HOST}:${PORT}
       - homepage.description=FastAPI application
     ports:
@@ -18,7 +19,6 @@ services:
     restart: unless-stopped
     volumes:
       - fastapi-app:/data
-      # - ${BASE_DIR}/data:/data
 
 volumes:
-  fastapi-app:
+  fastapi-app: null

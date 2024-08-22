@@ -1,3 +1,5 @@
+# fastapi-container-app
+
 ## Generate SSL Certificates
 
 To create new SSL certificates, run the following from the root directory and provide the necessary information on the command line:
